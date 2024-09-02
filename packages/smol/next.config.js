@@ -104,6 +104,7 @@ module.exports = withPlausibleProxy({
 				250: process.env.RPC_URI_FOR_250,
 				252: process.env.RPC_URI_FOR_252,
 				288: process.env.RPC_URI_FOR_288,
+				7560: 'https://rpc.cyber.co',
 				8453: process.env.RPC_URI_FOR_8453,
 				42161: process.env.RPC_URI_FOR_42161,
 				42170: process.env.RPC_URI_FOR_42170,
@@ -139,6 +140,7 @@ module.exports = withPlausibleProxy({
 				250: process.env.RPC_URL_FOR_250,
 				420: process.env.RPC_URL_FOR_420,
 				8453: process.env.RPC_URL_FOR_8453,
+				7560: 'https://rpc.cyber.co',
 				80001: process.env.RPC_URL_FOR_80001,
 				42161: process.env.RPC_URL_FOR_42161,
 				11155111: process.env.RPC_URL_FOR_11155111
@@ -146,7 +148,7 @@ module.exports = withPlausibleProxy({
 			/**********************************************************************************
 			 ** Wallet Connect configuration
 			 *********************************************************************************/
-			WALLETCONNECT_PROJECT_ID: process.env.WALLETCONNECT_PROJECT_ID,
+			WALLETCONNECT_PROJECT_ID: '0229de6788b4d0a95a3c03e93477facb',
 			WALLETCONNECT_PROJECT_NAME: 'Smol',
 			WALLETCONNECT_PROJECT_DESCRIPTION:
 				'Simple, smart and elegant dapps, designed to make your crypto journey a little bit easier.',

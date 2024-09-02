@@ -12,6 +12,7 @@ import {
 	bsc,
 	celo,
 	confluxESpace,
+	cyber,
 	fantom,
 	filecoin,
 	fraxtal,
@@ -357,6 +358,17 @@ const CHAINS: TSmolChains = {
 		disperseAddress: toAddress('0x8137aba86f91c8e592d6a791e06d0c868dbad3c8'),
 		yearnRouterAddress: undefined,
 		rpcUrls: assignRPCUrls(confluxESpace)
+	},
+	[cyber.id]: {
+		...cyber,
+		isLifiSwapSupported: false,
+		isMultisafeSupported: false,
+		safeAPIURI: '',
+		safeUIURI: '',
+		coingeckoGasCoinID: 'ethereum',
+		disperseAddress: toAddress('0xc2e0c2a4b720e8f28e08b2a4836d70c105ea2bcf'),
+		yearnRouterAddress: undefined,
+		rpcUrls: assignRPCUrls(cyber)
 	},
 	[blast.id]: {
 		...blast,
