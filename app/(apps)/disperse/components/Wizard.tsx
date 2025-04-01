@@ -59,7 +59,6 @@ const useApproveDisperse = ({
 	const shouldApprove = useMemo((): boolean => {
 		return toAddress(configuration.tokenToSend?.address) !== ethTokenAddress;
 	}, [configuration.tokenToSend]);
-
 	const {data: allowance = 0n, refetch} = useReadContract({
 		abi: erc20Abi,
 		functionName: 'allowance',
@@ -73,6 +72,8 @@ const useApproveDisperse = ({
 	});
 
 	const isApproved = allowance >= totalToDisperse;
+	console.log('allowance', allowance);
+	console.log('totalToDisperse', totalToDisperse);
 	const shouldUseSend = configuration.inputs.length === 1;
 	const onApproveToken = useCallback(async (): Promise<void> => {
 		if (isApproved || !shouldApprove) {
@@ -379,6 +380,7 @@ export function DisperseWizard(): ReactElement {
 	 ** approve function then we disperse tokens.
 	 *********************************************************************************************/
 	const handleApprove = useCallback(async () => {
+		console.log('onApproveToken');
 		await onApproveToken();
 		await refetch();
 		await onDisperseTokens();
