@@ -30,7 +30,7 @@
 		"@types/dompurify": "^3.0.5",
 		"@types/qrcode": "^1.5.5",
 		"@wagmi/core": "^2.16.7",
-		"axios": "^1.7.9",
+		"axios": "^1.13.5",
 		"cmdk": "^1.0.4",
 		"date-fns": "^4.1.0",
 		"dayjs": "^1.11.13",
